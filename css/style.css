@@ -1,0 +1,345 @@
+:root {
+    --primary: #b6895b;
+    --bg: #441d1d;
+}
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+    min-height: 4000px;
+}
+
+/*Navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color :rgb(182, 137, 91, 0.8);
+    border-bottom: 1px solid #dacfc5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.navbar .navbar-logo span {
+    color: var(--bg);
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    bottom: 0.5rem;
+    border-bottom: solid #f0edea;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#book-recomendation {
+    display: none;
+}
+
+/*Hero Section*/
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../image/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg,#441d1d, rgba(255, 255, 255, 0) 50%);
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 4em;
+    color: #441d1d;
+    text-shadow: 1px 1px 3px rgba(1, 1, 1, 0,5);
+    line-height: 1.2;
+}
+
+.hero .content h1 span {
+    color: #f0edea;
+}
+
+.hero .content p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(1, 1, 1, 0,5);
+}
+
+.hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 6, 0,5);
+}
+
+/* About */
+.about, .product, .account {
+    padding: 8rem 7% 1.4rem;
+}
+
+.about h2, .product h2, .account h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span, .product h2 span, .account h2 span {
+    color: var(--primary);
+}
+
+.about .row {
+    display: flex;
+}
+
+
+.about .row .about-img {
+    flex:  1 1 25rem;
+}
+
+.about .row .about-img img {
+    width: 100%
+}
+
+.about .row .content {
+    flex: 1 1 25rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 200;
+    line-height: 1.6rem;
+}
+
+.about .row .content p span {
+    color: #dba36b;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* Product */
+.product h2 , .account h2{
+    margin-bottom: 1rem;
+}
+
+.product p, .account p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 300;
+    line-height: 2;
+}
+
+.product h3 {
+    text-align: center;
+    max-width: 25rem;
+    margin: auto;
+}
+
+.product .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: space-around;
+}
+
+.product .row .product-card {
+    text-align: center;
+    padding-bottom: 2rem;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.product .row .product-card img {
+    border-radius: 2%;
+    width: 50%;
+}
+
+.product .row .product-card .product-card-title {
+    margin-top: 1rem auto 0.5rem;
+    font-size: 1.8rem;
+}
+
+/* Account */ 
+.account .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: #b6895bd0;
+    width: 500px;
+    margin: auto;
+    border-radius: 5%;
+}
+
+.account .row form {
+    flex: 1 1 50%; 
+    max-width: 400px; 
+    margin: auto; 
+    margin-top: 2rem; 
+    padding: 3rem;
+    text-align: center;
+}
+
+.account .row form .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    background-color: var(--bg);
+    border: 1px solid #f0edea;
+    padding-left: 2rem;
+}
+
+.account .row form .input-group input {
+    width: 100%; 
+    padding: 1rem;
+    font-size: 1.4rem; 
+    background: none;
+    color: #f0edea;
+}
+
+.account .row form .btn {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: #441d1d;
+    cursor: pointer;
+}
+/* Media Queries */ 
+
+/*laptop*/
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+ /*Tablet*/
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+    
+    #book-recomendation {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #f3d9bb;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.5s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a{
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2); 
+    }
+
+    .product p {
+        font-size: 1.2rem;
+    }
+
+    .account .row {
+        flex-wrap: wrap;
+    }
+}
+
+ /*Hp*/
+ @media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+    
+}
